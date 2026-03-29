@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f7f8fc, #d0d9e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #1c1c1c;
+}
+
+.container {
+    background-color: rgb(58, 62, 63);
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8em;
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    text-align: left;
+    font-weight: bold;
+    color: #666;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.3rem;
+    border-radius: 4px;
+    border: 1px solid #cacaca;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: rgb(255, 0, 0);
+    box-shadow: 0 0 8px rgba(126, 159, 224, 0.2);
+    outline: none;
+}
+
+button {
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    background-color: rgb(255, 125, 86);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(197, 73, 24);  
+}
+
+button:active {
+    background-color: rgb(197, 73, 24);  
+}

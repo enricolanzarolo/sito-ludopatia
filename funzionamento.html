@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>FUNZIONAMENTO | Ludopatia</title>
+	<link rel="icon" href="slot.png">
+    <link rel="stylesheet" href="stilefunzionamento.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka">
+	<script src="https://kit.fontawesome.com/734afa4d70.js" crossorigin="anonymous"></script>
+	<script src="sito.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="menu">
+                <button class="buttonmenu"><img src="menu.png" id="menuim"></button>
+                <div class="contmenu">
+					<a href="home.html"><div><i class="fa-solid fa-house"></i> HOME </div></a>
+                    <a href="./informazioni.html"><i class="fa-regular fa-circle-question"></i> INFORMAZIONI</a>
+                    <a href="./campagne.html"><i class="fa-solid fa-bullhorn"></i> CAMPAGNE</a>
+                    <a href="./storia.html"><i class="fa-regular fa-clock"></i> STORIA</a>
+                    <a href="./funzionamento.html"><i class="fa-solid fa-wrench"></i> FUNZIONAMENTO</a>
+            </div>
+        </header>
+        <section>
+			<div class="titolo1"><b>FUNZIONAMENTO</b></div>
+			<div class="titolo2"><b>● ALGORITMO DI VON NEUMANN</b></div>
+			<div class="paragrafo">
+				Il metodo del quadrato centrale, proposto nel 1946 da John von Neumann, è uno dei primi algoritmi per generare numeri casuali. Funziona prendendo un numero iniziale, calcolandone il quadrato e poi estraendo le cifre centrali del risultato per ottenere un nuovo numero. Questo processo viene ripetuto per generare una sequenza di numeri casuali.
+				Nonostante la sua semplicità, il metodo ha dei limiti, come la possibilità di generare sequenze ripetitive se il numero iniziale non è scelto con attenzione. Tuttavia, ha avuto un grande impatto sullo sviluppo di generatori di numeri pseudocasuali, utilizzati in simulazioni e crittografia.
+			</div>
+			<div class="titolo2"><b>● ALGORITMI RNG</b></div>
+			<div class="paragrafo">
+				Un RNG (Random Number Generator) è un dispositivo o algoritmo che genera numeri casuali. Esistono due tipi principali di RNG:
+				<br><br>
+				TRNG (True Random Number Generator): Utilizza fenomeni fisici imprevedibili, come il rumore elettronico o il decadimento radioattivo, per generare numeri casuali. Poiché dipendono da eventi fisici, i numeri generati sono non deterministici e impossibili da prevedere senza misurare lo stesso fenomeno.
+				<br><br>
+				PRNG (Pseudorandom Number Generator): Si basa su algoritmi matematici che producono sequenze di numeri che sembrano casuali, ma sono deterministici. I PRNG usano un "seme" iniziale per generare una sequenza di numeri che, pur apparendo casuale, è ripetibile se si conosce il seme.
+			</div>
+			<div class="titolo2"><b>● ESEMPIO DI GIOCO D'AZZARDO</b></div>
+			<div class="paragrafo">
+                E' stato realizzato un prototipo di gioco d'azzardo prendendo spunto dal gioco da carte Blackjack.
+                <button onclick="vaiAllaRegistrazione()" class="provalo">Provalo</button>
+            </div>
+	</body>
+</html>

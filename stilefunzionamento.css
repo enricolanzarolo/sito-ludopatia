@@ -1,0 +1,202 @@
+@import url('https://fonts.cdnfonts.com/css/fjalla-one-2');
+
+body {
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    background-color: #3a3e3f;
+    overflow-x: hidden;
+}
+
+.container {
+    background-size: cover;
+    margin: 1%;
+    width: 98%;
+    min-height: 98vh;
+    border-radius: 10px;
+    z-index: 1;
+    filter: none;
+}
+
+/* === MENU (in alto a sinistra, come home) === */
+header {
+    position: absolute;
+    top: 1.5em;
+    left: 2em;
+    z-index: 10;
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.buttonmenu {
+    width: 3em;
+    height: 3em;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.buttonmenu img {
+    width: 100%;
+    height: auto;
+}
+
+/* menu a tendina */
+.contmenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(236, 236, 236);
+    border-radius: 0.75rem;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 11;
+    padding: 0.5em 0;
+}
+
+.menu:hover .contmenu {
+    display: block;
+}
+
+.contmenu a {
+    display: block;
+    color: #1c1c1c;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1em;
+}
+
+.contmenu a:hover {
+    background-color: #ff7d56;
+    border-radius: 0.75rem;
+}
+
+/* === TITOLI === */
+.titolo1 {
+    font-size: 4em;
+    font-weight: bold;
+    color: #ff7d56;
+    font-family: 'Fjalla One', sans-serif;
+    text-align: center;
+    margin: 1em auto 0.5em auto;
+    display: block;
+}
+
+.titolo2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff7d56;
+    text-align: left;
+    margin: 30px 0 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #e05a36;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+/* === PARAGRAFI === */
+.paragrafo {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fcfcfc;
+    background-color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    z-index: 3;
+    margin: 20px 0 40px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.paragrafo ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+/* === BOTTONE “PROVALO” === */
+.provalo {
+    background-color: #ff7d56;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.provalo:hover {
+    background-color: #e05a36;
+    transform: scale(1.05);
+}
+
+/* === RESPONSIVE === */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .titolo1 {
+        font-size: 3em;
+    }
+    .titolo2 {
+        font-size: 1.8em;
+    }
+    .paragrafo {
+        font-size: 16px;
+        padding: 20px;
+    }
+}
+
+/* Smartphone grande */
+@media (max-width: 768px) {
+    .titolo1 {
+        font-size: 2.3em;
+        margin-top: 2em;
+    }
+    .titolo2 {
+        font-size: 1.5em;
+        margin-top: 1.5em;
+    }
+    .paragrafo {
+        font-size: 15px;
+        padding: 15px;
+        margin: 15px 0 30px 0;
+    }
+    .provalo {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+    .buttonmenu {
+        width: 2.8em;
+        height: 2.8em;
+    }
+}
+
+/* Smartphone piccolo */
+@media (max-width: 480px) {
+    .titolo1 {
+        font-size: 1.8em;
+        margin-top: 1.5em;
+    }
+    .titolo2 {
+        font-size: 1.2em;
+    }
+    .paragrafo {
+        font-size: 14px;
+        padding: 12px;
+    }
+    .provalo {
+        font-size: 0.9em;
+        padding: 6px 14px;
+    }
+    .buttonmenu {
+        width: 2.5em;
+        height: 2.5em;
+    }
+    .contmenu a {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+}

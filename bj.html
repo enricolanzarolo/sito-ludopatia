@@ -1,0 +1,133 @@
+<!-- FILE: bj.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BJ Ludopatia</title>
+    <link rel="icon" href="slot.png">
+    <link rel="stylesheet" href="bj.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka">
+    <script src="https://kit.fontawesome.com/734afa4d70.js" crossorigin="anonymous"></script>
+    <script src="bj.js" defer></script>
+</head>
+<body>
+    <div class="bj-background">
+        <div class="bj-table">
+            <div class="bj-table-texture"></div>
+            <header class="bj-header">
+                <div class="bj-title">
+                    <img src="bj.png" alt="Logo Blackjack" class="bj-logo">
+                    <span id="bj-balance">Saldo: €<span id="balance-value">100</span></span>
+                </div>
+                <button id="rules-btn" class="bj-btn bj-btn-secondary">
+                    <i class="fas fa-info-circle"></i> Regole
+                </button>
+            </header>
+            <main class="bj-main">
+                <section class="bj-game-area">
+                    <div class="bj-dealer-area">
+                        <h3 class="bj-area-title">Banco</h3>
+                        <div class="bj-cards" id="bj-cards-dealer"></div>
+                        <div class="bj-score" id="dealer-score"></div>
+                    </div>
+                    
+                    <div class="bj-middle-area">
+                        <div class="bj-bet-controls">
+                            <div class="bj-bet-amount">
+                                <button class="bj-bet-btn" data-action="decrease">-</button>
+                                <div class="bj-bet-display">
+                                    <span class="bj-bet-label">Scommessa:</span>
+                                    <span id="bet-value" class="bj-bet-value">€10</span>
+                                </div>
+                                <button class="bj-bet-btn" data-action="increase">+</button>
+                            </div>
+                            <button id="bet-confirm" class="bj-btn bj-btn-primary">
+                                <i class="fas fa-play"></i> Inizia Partita
+                            </button>
+                        </div>
+                        
+                        <div class="bj-game-controls">
+                            <button id="hit-btn" class="bj-btn bj-btn-action" disabled>
+                                <i class="fas fa-plus"></i> Carta
+                            </button>
+                            <button id="stand-btn" class="bj-btn bj-btn-action" disabled>
+                                <i class="fas fa-hand-paper"></i> Resta
+                            </button>
+                            <button id="reset-btn" class="bj-btn bj-btn-secondary">
+                                <i class="fas fa-redo"></i> Nuova
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="bj-player-area">
+                        <h3 class="bj-area-title">Giocatore</h3>
+                        <div class="bj-cards" id="bj-cards-player"></div>
+                        <div class="bj-score" id="player-score"></div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Popup Risultato -->
+    <div id="result-popup" class="bj-popup-hide">
+        <div class="bj-overlay">
+            <div class="bj-result-popup">
+                <div class="bj-result-content">
+                    <div id="result-icon" class="bj-result-icon"></div>
+                    <h2 id="result-title" class="bj-result-title"></h2>
+                    <p id="result-message" class="bj-result-message"></p>
+                    <p id="result-amount" class="bj-result-amount"></p>
+                    <button onclick="hideResult()" class="bj-btn bj-btn-primary">Continua</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Regole -->
+    <div id="rules-popup" class="bj-popup-hide">
+        <div class="bj-overlay">
+            <div class="bj-popup">
+                <div class="bj-popup-header">
+                    <h2>Regole Blackjack</h2>
+                    <button onclick="closeRules()" class="bj-popup-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="bj-popup-content">
+                    <div class="bj-rule-item">
+                        <i class="fas fa-bullseye"></i>
+                        <div>
+                            <h3>Scopo del gioco</h3>
+                            <p>Avvicinarsi a 21 senza superarlo!</p>
+                        </div>
+                    </div>
+                    <div class="bj-rule-item">
+                        <i class="fas fa-dice"></i>
+                        <div>
+                            <h3>Valori carte</h3>
+                            <p>Numeri: valore nominale • Figure: 10 • Asso: 1 o 11</p>
+                        </div>
+                    </div>
+                    <div class="bj-rule-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>Svolgimento</h3>
+                            <p>Ricevi 2 carte scoperte, il banco una scoperta e una coperta</p>
+                        </div>
+                    </div>
+                    <div class="bj-rule-item">
+                        <i class="fas fa-trophy"></i>
+                        <div>
+                            <h3>Vittoria</h3>
+                            <p>Vinci se ti avvicini a 21 senza superare e più del banco</p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="closeRules()" class="bj-btn bj-btn-primary">Inizia a giocare!</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
